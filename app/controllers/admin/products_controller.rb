@@ -3,7 +3,7 @@ class Admin::ProductsController < ApplicationController
   #MUST RESTART SERVER AFTER CHANGING AUTHENTICATE TO ENV
 
   def index
-    @products = Product.order(id: :desc).all
+    @products = Product.order(id: :desc)
   end
 
   def new

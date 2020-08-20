@@ -1,6 +1,6 @@
 class AboutController < ApplicationController
   def show
-    #used get method instead of resource since there were issues. therefore not rendering anything here
+    #in views, finds directory about, then renders show
   end
 
 end

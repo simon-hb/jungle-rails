@@ -1,13 +1,15 @@
+<div class="page-header">
 <h1>Admin Dashboard</h1>
-<p>Product count: <%= @products.count %></p>
-<ul>
+</div>
+<h3>Product count: <%= @products.count %></h3>
+<ul class="list-group">
 <% @products.each do |product| %>
-  <li><%= link_to product.name, product_path(product.id) %></li>
+  <li class="list-group-item"><%= link_to product.name, product_path(product.id) %></li>
 <% end %>
 </ul>
-<p>Category count: <%= @categories.count %></p>
-<ul>
+<h3>Category count: <%= @categories.count %></h3>
+<ul class="list-group">
 <% @categories.each do |category| %>
-  <li><%= link_to category.name, category_path(category.id) %></li>
+  <li class="list-group-item"><%= link_to category.name, category_path(category.id) %></li>
 <% end %>
 </ul>
