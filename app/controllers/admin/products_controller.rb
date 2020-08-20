@@ -1,5 +1,6 @@
 class Admin::ProductsController < ApplicationController
-  http_basic_authenticate_with name: 'Jungle', password: 'book'
+  http_basic_authenticate_with name: ENV['ADMIN_AUTH_LOGIN'], password: ENV['ADMIN_AUTH_PASSWORD']
+  #MUST RESTART SERVER AFTER CHANGING AUTHENTICATE TO ENV
 
   def index
     @products = Product.order(id: :desc).all
