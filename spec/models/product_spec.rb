@@ -11,6 +11,7 @@ RSpec.describe Product, type: :model do
     context "fields" do
       it 'should save each field successfully' do
         @product = Product.new(name:'jphone', price: 500, quantity: 1, category: @category)
+        expect(@product).to be_valid
         expect(@product.name).to be_present
         expect(@product.price).to be_present
         expect(@product.quantity).to be_present

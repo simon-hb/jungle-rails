@@ -6,8 +6,8 @@ RSpec.describe User, type: :model do
 
     context "fields" do
       it "should save each field successfully" do
-        @test_user = User.new(first_name: 'Simon', last_name: 'Jung', email: 'simon@simon', password: 'password', password_confirmation: 'password')
-        expect(@test_user).to be_present
+        @test_user = User.new(first_name: 'Simon', last_name: 'Jung', email: 'hi@hi', password: 'password', password_confirmation: 'password')
+        expect(@test_user).to be_valid
         expect(@test_user.first_name).to be_present
         expect(@test_user.last_name).to be_present
         expect(@test_user.email).to be_present
@@ -103,7 +103,7 @@ RSpec.describe User, type: :model do
         @user.save
         auth_user = User.authenticate_with_credentials('hi@hi', 'simon123')
         # puts "#{auth_user.inspect}"
-        expect(auth_user).to_not be_nil
+        expect(auth_user).to be_truthy
       end
     end
 
@@ -123,7 +123,7 @@ RSpec.describe User, type: :model do
         @user.save
         auth_user = User.authenticate_with_credentials(' hi@hi ', 'simon123')
         # puts "#{auth_user.inspect}"
-        expect(auth_user).to_not be_nil
+        expect(auth_user).to be_truthy
       end
     end
 
@@ -133,7 +133,7 @@ RSpec.describe User, type: :model do
         @user.save
         auth_user = User.authenticate_with_credentials('HI@hi', 'simon123')
         # puts "#{auth_user.inspect}"
-        expect(auth_user).to_not be_nil
+        expect(auth_user).to be_truthy
       end
     end
   end
