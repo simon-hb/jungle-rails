@@ -20,9 +20,11 @@ RSpec.describe Product, type: :model do
 
     context "name" do
       it 'should produce error without name' do
-        @product = Product.new(name:nil, price: 500, quantity: 1, category: @category)
+        @product = Product.new(name: nil, price: 500, quantity: 1, category: @category)
         expect(@product).to_not be_valid
         @product.save
+        # puts @product.errors.messages.inspect 
+        # ^this prints error message so we know what to include for the expect test
         expect(@product.errors.messages[:name]).to include("can't be blank")
       end
     end
