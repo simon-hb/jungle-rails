@@ -4,6 +4,10 @@ A mini e-commerce application built with Rails 4.2 for purposes of learning ruby
 
 Welcome to my first application built using Ruby! Please play around and purchase some of the exotic items in stock.
 
+## Screenshots
+!["Welcome to JB. About us"](https://github.com/simon-hb/jungle-rails/blob/master/docs/about_jungle_book.png?raw=true)
+!["Product list"](https://github.com/simon-hb/jungle-rails/blob/master/docs/products.png?raw=true)
+!["Checkout cart"](https://github.com/simon-hb/jungle-rails/blob/master/docs/cart.png?raw=true)
 
 ## Setup
 
