@@ -1,18 +1,17 @@
 # Jungle
 
-A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
+A mini e-commerce application built with Rails 4.2 for purposes of learning ruby on the rails. Also rspec, capybara, and poltergeist for testing.
+
+Welcome to my first application built using Ruby! Please play around and purchase some of the exotic items in stock.
 
 
 ## Setup
 
 1. Run `bundle install` to install dependencies
-2. Create `config/database.yml` by copying `config/database.example.yml`
-3. Create `config/secrets.yml` by copying `config/secrets.example.yml`
-4. Run `bin/rake db:reset` to create, load and seed db
-5. Create .env file based on .env.example
-6. Sign up for a Stripe account
-7. Put Stripe (test) keys into appropriate .env vars
-8. Run `bin/rails s -b 0.0.0.0` to start the server
+2. Run `bin/rake db:reset` to create, load and seed db
+3. Run `bin/rails s -b 0.0.0.0` to start the server
+4. Open localhost:3000 and play around on the app!
+5. The user & password to access admin pages is Jungle & book
 
 ## Stripe Testing
 
